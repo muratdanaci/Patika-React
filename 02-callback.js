@@ -16,35 +16,66 @@ sayHi(() => {
 
 import fetch from "node-fetch";
 
-fetch("https://jsonplaceholder.typicode.com/users")
-  .then((data) => data.json())
-  .then((users) => {
-		console.log("Users Yuklendi!", users);
+// fetch("https://jsonplaceholder.typicode.com/users")
+//   .then((data) => data.json())
+//   .then((users) => {
+// 		console.log("Users Yuklendi!", users);
 
-    fetch("https://jsonplaceholder.typicode.com/posts/1")
-      .then((data) => data.json())
-      .then((post1) => {
-				console.log("Post 1 Yuklendi!", post1);
+//     fetch("https://jsonplaceholder.typicode.com/posts/1")
+//       .then((data) => data.json())
+//       .then((post1) => {
+// 				console.log("Post 1 Yuklendi!", post1);
 
-				fetch("https://jsonplaceholder.typicode.com/posts/2")
-				.then((data) => data.json())
-				.then((post2) => {
-					console.log("Post 2 Yuklendi!", post2);
-					
-					fetch("https://jsonplaceholder.typicode.com/posts/3")
-					.then((data) => data.json())
-					.then((post3) => {
-						console.log("Post 3 Yuklendi!", post3);
-						
-						fetch("https://jsonplaceholder.typicode.com/posts/4")
-						.then((data) => data.json())
-						.then((post4) => {
-							console.log("Post 4 Yuklendi!", post4);
-							fetch("https://jsonplaceholder.typicode.com/posts/5")
-							.then((data) => data.json())
-							.then((post5) => console.log("Post 5 Yuklendi!", post5));
-						});
-					});
-				});
-			});
-		});
+// 				fetch("https://jsonplaceholder.typicode.com/posts/2")
+// 				.then((data) => data.json())
+// 				.then((post2) => {
+// 					console.log("Post 2 Yuklendi!", post2);
+
+// 					fetch("https://jsonplaceholder.typicode.com/posts/3")
+// 					.then((data) => data.json())
+// 					.then((post3) => {
+// 						console.log("Post 3 Yuklendi!", post3);
+
+// 						fetch("https://jsonplaceholder.typicode.com/posts/4")
+// 						.then((data) => data.json())
+// 						.then((post4) => {
+// 							console.log("Post 4 Yuklendi!", post4);
+// 							fetch("https://jsonplaceholder.typicode.com/posts/5")
+// 							.then((data) => data.json())
+// 							.then((post5) => console.log("Post 5 Yuklendi!", post5));
+// 						});
+// 					});
+// 				});
+// 			});
+// 		});
+
+// async function getData() {
+//   const users = await (
+//     await fetch("https://jsonplaceholder.typicode.com/users")
+//   ).json();
+//   const post1 = await (
+//     await fetch("https://jsonplaceholder.typicode.com/posts/1")
+//   ).json();
+// 	const post2 = await ((await fetch("https://jsonplaceholder.typicode.com/posts/2")).json());
+
+//   console.log("users", users);
+//   console.log("post1", post1);
+//   console.log("post2", post2);
+// }
+// getData();
+
+(async () => {
+  const users = await (
+    await fetch("https://jsonplaceholder.typicode.com/users")
+  ).json();
+  const post1 = await (
+    await fetch("https://jsonplaceholder.typicode.com/posts/1")
+  ).json();
+  const post2 = await (
+    await fetch("https://jsonplaceholder.typicode.com/posts/2")
+  ).json();
+
+  console.log("users", users);
+  console.log("post1", post1);
+  console.log("post2", post2);
+})();
