@@ -1,0 +1,24 @@
+{
+  "name": "learning-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node 01-index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muratdanaci/Patika-React.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muratdanaci/Patika-React/issues"
+  },
+  "homepage": "https://github.com/muratdanaci/Patika-React#readme",
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "slugify": "^1.6.6"
+  }
+}
